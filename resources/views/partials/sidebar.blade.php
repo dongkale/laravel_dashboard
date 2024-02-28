@@ -13,10 +13,10 @@
 			</a>
 			<ul id="users-collapse" class="list-unstyled collapse">
 				<li>
-					<a href="#"> <i class="fa fa-angle-right"></i> Menu1 </a>
+					<a href="/menu1_1"> <i class="fa fa-angle-right"></i> Menu1 </a>
 				</li>
 				<li>
-					<a href="#"> <i class="fa fa-angle-right"></i> Menu2 </a>
+					<a href="/menu1_2"> <i class="fa fa-angle-right"></i> Menu2 </a>
 				</li>
 			</ul>
 		</li>
@@ -27,10 +27,10 @@
 			</a>
 			<ul id="users2-collapse" class="list-unstyled collapse">
 				<li>
-					<a href="#"> <i class="fa fa-angle-right"></i> Menu1 </a>
+					<a href="#Menu1"> <i class="fa fa-angle-right"></i> Menu1 </a>
 				</li>
 				<li>
-					<a href="#"> <i class="fa fa-angle-right"></i> Menu2 </a>
+					<a href="#Menu2"> <i class="fa fa-angle-right"></i> Menu2 </a>
 				</li>
 			</ul>
 		</li>
@@ -41,10 +41,10 @@
 			</a>
 			<ul id="users3-collapse" class="list-unstyled collapse">
 				<li>
-					<a href="#"> <i class="fa fa-angle-right"></i> Menu1 </a>
+					<a href="#Menu1"> <i class="fa fa-angle-right"></i> Menu1 </a>
 				</li>
 				<li>
-					<a href="#"> <i class="fa fa-angle-right"></i> Menu2 </a>
+					<a href="#Menu2"> <i class="fa fa-angle-right"></i> Menu2 </a>
 				</li>
 			</ul>
 		</li>

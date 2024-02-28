@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Auth;
 
 Auth::routes();
 
-Route::get("/", [App\Http\Controllers\HomeController::class, "index"])->name(
-    "home"
-);
+Route::get("/", [App\Http\Controllers\HomeController::class, "index"]);
+
+Route::get("/menu1_1", [App\Http\Controllers\HomeController::class, "menu1_1"]);
+Route::get("/menu1_2", [App\Http\Controllers\HomeController::class, "menu1_2"]);

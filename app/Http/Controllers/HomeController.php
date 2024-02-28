@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,18 @@ class HomeController extends Controller
      */
     public function index()
     {
+        return view("home");
+    }
+
+    public function menu1_1()
+    {
+        Log::info("menu1_1");
+        return view("home");
+    }
+
+    public function menu1_2()
+    {
+        Log::info("menu1_1");
         return view("home");
     }
 }

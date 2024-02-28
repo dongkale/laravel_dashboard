@@ -19,7 +19,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"></script>
 
-    <!-- 부트스트랩 JS 및 기타 스크립트 -->    
+    <!-- 부트스트랩 JS 및 기타 스크립트 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -27,8 +27,37 @@
     <!-- Style CSS -->
     <link href="{{ mix('/css/styles.css') }}" rel="stylesheet">
 
-    <!-- Scripts -->    
+    <!-- Scripts -->
     <script type="text/javascript" src="{{mix('/js/app.js')}}"></script>
+
+    <style>
+        .row.content {height: 550px}
+        .sidebar {
+            background-color: #f1f1f1;
+            height: 100%;
+            min-height: 100vh; /* 최소 높이를 화면의 전체 높이로 설정 */
+        }
+        @media screen and (max-width: 767px) {
+            .row.content {height: auto;}
+        }
+        .card {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 15px;
+            /* padding-left: 15px;
+            padding-right: 15px; */
+        }
+        /* 버튼 스타일 */
+        .btn-primary {
+            background-color: #007bff; /* 파란색 */
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* 파란색 (hover 시) */
+            border-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
 
@@ -42,7 +71,7 @@
             <!-- 여기에 사이드바 메뉴를 생성하는 Blade 코드를 추가할 수 있습니다. -->
             @include('partials.sidebar')
         </aside>
-        
+
         <!-- 콘텐츠 영역 -->
         <article class="content container-fluid">
             <!-- 여기에 콘텐츠를 추가할 수 있습니다. -->
@@ -61,7 +90,7 @@ $(function () {
         sidebar.toggleClass('hidden');
         sidebar.userSet = true;
     });
-    
+
     $(window).on('resize', function () {
         if (!sidebar.userSet) {
             if (document.body.clientWidth >= 768) {
@@ -70,6 +99,52 @@ $(function () {
                 sidebar.addClass('hidden');
             }
         }
+    });
+
+    // $('.sidebar a').on('click', function() {
+    //     alert('서브 메뉴를 클릭했습니다.');
+    // });
+
+    // $('.sidebar > a').click(function () {
+	// 	$('.sidebar-submenu').slideUp(200);
+	// 	if ($(this).parent().hasClass('active')) {
+	// 		$('.sidebar-dropdown').removeClass('active');
+	// 		$(this).parent().removeClass('active');
+	// 	} else {
+	// 		$('.sidebar-dropdown').removeClass('active');
+	// 		$(this).next('.sidebar-submenu').slideDown(200);
+	// 		$(this).parent().addClass('active');
+	// 	}
+	// });
+
+    //  서브 메뉴를 클릭했을 때
+    $('.sidebar-submenu a').click(function () {
+        // 메뉴가 활성화되어 있지 않다면
+        if (!$(this).hasClass('active')) {
+            // 모든 메뉴를 비활성화
+            $('.sidebar-submenu a').removeClass('active');
+            // 현재 메뉴만 활성화
+            $(this).addClass('active');
+        } else {
+            // 현재 메뉴를 비활성화
+            $(this).removeClass('active');
+        }
+    });
+
+    // 서브 메뉴 상태 복원
+    $('.collapse').each(function() {
+        var collapseId = $(this).attr('id');
+        if(localStorage.getItem(collapseId) === 'true') {
+            $(this).addClass('show');
+        }
+    });
+
+    // 서브 메뉴 클릭 이벤트
+    $('[data-toggle="collapse"]').on('click', function() {
+        var target = $(this).attr('href').substring(1); // href에서 # 제거
+        var isExpanded = $('#' + target).hasClass('show');
+        // 토글된 상태 저장
+        localStorage.setItem(target, !isExpanded);
     });
 });
 
