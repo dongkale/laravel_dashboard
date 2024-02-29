@@ -8,7 +8,7 @@
 		</li>
 		<li>
 			<a href="#users-collapse" data-toggle="collapse">
-				<i class="fa fa-users"></i> Social
+				<i class="fa fa-bars"></i> Social
 				<i class="fa fa-angle-down pull-right"></i>
 			</a>
 			<ul id="users-collapse" class="list-unstyled collapse">
@@ -22,7 +22,7 @@
 		</li>
 		<li>
 			<a href="#users2-collapse" data-toggle="collapse">
-				<i class="fa fa-users"></i> Mobile
+				<i class="fa fa-bars"></i> Mobile
 				<i class="fa fa-angle-down pull-right"></i>
 			</a>
 			<ul id="users2-collapse" class="list-unstyled collapse">
@@ -36,7 +36,7 @@
 		</li>
 		<li>
 			<a href="#users3-collapse" data-toggle="collapse">
-				<i class="fa fa-users"></i> Mail
+				<i class="fa fa-bars"></i> Mail
 				<i class="fa fa-angle-down pull-right"></i>
 			</a>
 			<ul id="users3-collapse" class="list-unstyled collapse">

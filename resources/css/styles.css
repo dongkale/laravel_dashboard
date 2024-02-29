@@ -45,6 +45,7 @@
     padding: 0.5rem;
     color: rgba(255, 255, 255, 0.75);
     text-decoration: none;
+    font-size: larger;
 }
 
 .sidebar ul li a:hover,
@@ -60,6 +61,7 @@
     padding: 0.5rem 1rem;
     color: rgba(255, 255, 255, 0.75);
     text-decoration: none;
+    font-size: medium;
 }
 
 .sidebar ul ul a:hover {
@@ -88,6 +90,7 @@
     font-weight: bold;
     background: rgba(0, 0, 0, 0.15);
     border-bottom: 1px rgba(255, 255, 255, 0.19) solid;
+    font-size: x-large;
 }
 
 .sidebar.hidden {

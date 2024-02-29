@@ -31,18 +31,17 @@
     <script type="text/javascript" src="{{mix('/js/app.js')}}"></script>
 
     <style>
-        .row.content {height: 550px}
+        /* .row.content {height: 550px}
         .sidebar {
             background-color: #f1f1f1;
             height: 100%;
-            min-height: 100vh; /* 최소 높이를 화면의 전체 높이로 설정 */
+            min-height: 100vh;
         }
         @media screen and (max-width: 767px) {
             .row.content {height: auto;}
-        }
+        } */
         .card {
-            margin-top: 10px;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             padding: 15px;
             /* padding-left: 15px;
             padding-right: 15px; */
@@ -71,11 +70,12 @@
             <!-- 여기에 사이드바 메뉴를 생성하는 Blade 코드를 추가할 수 있습니다. -->
             @include('partials.sidebar')
         </aside>
-
-        <!-- 콘텐츠 영역 -->
-        <article class="content container-fluid">
+        <!-- 콘텐츠 영역 -->        
+        <article class="content container-fluid mt-1 py-4">
             <!-- 여기에 콘텐츠를 추가할 수 있습니다. -->
-            @yield('content')
+            <section>
+                @yield('content')
+            </section>
         </article>
     </article>
 </main>
