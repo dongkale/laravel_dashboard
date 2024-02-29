@@ -148,6 +148,33 @@ $(function () {
     });
 });
 
+
+$('.collapse').on('show.bs.collapse', function() {
+    $(this).slideDown(200);
+    console.log(`show`);
+}).on('hide.bs.collapse', function() {
+    $(this).slideUp(200);
+    console.log(`hide`);
+});
+
+function selectMenu__() {
+    var url = window.location.href;
+    var activePage = url;
+
+    $('.nav-item').each(function () {        
+        var findit = $(this).find('a.nav-menu').attr('href'); // $(this).find('ul li a');
+        var linkPage = findit.attr('href');
+        console.log(`linkPage ==> ${linkPage}`);
+        
+        if (activePage == linkPage) {            
+            findit.addClass('active');
+            console.log(`activePage ==> ${linkPage}`);
+        } else {            
+            findit.removeClass('active');
+        }
+    });
+}
+
 </script>
 
 </body>
