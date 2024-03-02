@@ -28,7 +28,7 @@
     max-width: 250px;
     min-height: calc(100vh - 56px);
     max-height: calc(100vh - 56px);
-    transition: all 0.25s;
+    /* transition: all 0.25s; */
     overflow-y: auto;
 }
 
@@ -103,3 +103,4 @@
     max-height: calc(100vh - 56px);
     overflow-y: auto;
 }
+
