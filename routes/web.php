@@ -24,3 +24,6 @@ Route::get("/", [App\Http\Controllers\HomeController::class, "index"]);
 
 Route::get("/menu1_1", [App\Http\Controllers\HomeController::class, "menu1_1"]);
 Route::get("/menu1_2", [App\Http\Controllers\HomeController::class, "menu1_2"]);
+
+Route::get("/menu2_1", [App\Http\Controllers\HomeController::class, "menu2_1"]);
+Route::get("/menu2_2", [App\Http\Controllers\HomeController::class, "menu2_2"]);

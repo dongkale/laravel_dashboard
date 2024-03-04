@@ -25,12 +25,12 @@
                 <i class="fa fa-bars"></i> Mobile
                 <i class="fa fa-angle-down pull-right"></i>
             </a>
-            <ul id="users2-collapse" class="list-unstyled collapse">
+            <ul id="users2-collapse" class="list-unstyled collapse {{ getMainState($mainMenu, 'MENU_2', 'show') }}">
                 <li>
-                    <a href="#Menu1"> <i class="fa fa-angle-right"></i> Menu1 </a>
+                    <a class="{{ getSubState($subMenu, 'MENU_2_1', 'active') }}" href="{{ url('/menu2_1') }}"> <i class="fa fa-angle-right"></i> Menu1 </a>
                 </li>
                 <li>
-                    <a href="#Menu2"> <i class="fa fa-angle-right"></i> Menu2 </a>
+                    <a class="{{ getSubState($subMenu, 'MENU_2_2', 'active') }}" href="{{ url('/menu2_2') }}"> <i class="fa fa-angle-right"></i> Menu2 </a>
                 </li>
             </ul>
         </li>

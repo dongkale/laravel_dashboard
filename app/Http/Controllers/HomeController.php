@@ -25,7 +25,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view("home");
+        return view("home", [
+            'mainMenuCode' => 'MENU_1',
+            'subMenuCode' => 'MENU_1_1'
+        ]);
     }
 
     public function menu1_1()
@@ -35,7 +38,10 @@ class HomeController extends Controller
 
         Log::info("menu1_1");
 
-        return view("home");
+        return view("home", [
+            'mainMenuCode' => 'MENU_1',
+            'subMenuCode' => 'MENU_1_1'
+        ]);
     }
 
     public function menu1_2()
@@ -44,6 +50,36 @@ class HomeController extends Controller
         View::share('subMenuCode', 'MENU_1_2');
 
         Log::info("menu1_1");
-        return view("home");
+
+        return view("home", [
+            'mainMenuCode' => 'MENU_1',
+            'subMenuCode' => 'MENU_1_2'
+        ]);
+    }
+
+    public function menu2_1()
+    {
+        View::share('mainMenuCode', 'MENU_2');
+        View::share('subMenuCode', 'MENU_2_1');
+
+        Log::info("menu2_1");
+
+        return view("home", [
+            'mainMenuCode' => 'MENU_2',
+            'subMenuCode' => 'MENU_2_1'
+        ]);
+    }
+
+    public function menu2_2()
+    {
+        View::share('mainMenuCode', 'MENU_2');
+        View::share('subMenuCode', 'MENU_2_2');
+
+        Log::info("menu1_1");
+
+        return view("home", [
+            'mainMenuCode' => 'MENU_2',
+            'subMenuCode' => 'MENU_2_2'
+        ]);
     }
 }

@@ -155,6 +155,8 @@ $(function () {
     $('.sidebar-toggle').on('click', function () {
         sidebar.toggleClass('hidden');
         sidebar.userSet = true;
+
+        console.log(`sidebar.userSet ==> ${sidebar.userSet}`);
     });
 
     $(window).on('resize', function () {
